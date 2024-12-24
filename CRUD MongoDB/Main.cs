@@ -55,14 +55,14 @@ namespace CRUD_MongoDB
                         Console.WriteLine("(Nome, Idade, Cor, Estado, Cidade)");
                         Console.WriteLine();
                         Console.WriteLine("Caso não tenho o dado ou não saiba, coloque uma virgula antes de um espaço e coloque uma virgula depois");
-                        Console.WriteLine("Exemplo: Nome, , Sexo");
+                        Console.WriteLine("Exemplo: Nome, , Cor");
                         Console.WriteLine();
                         string dadosInline = Console.ReadLine();
 
                         var listaDados = pessoaCrud.toList(dadosInline);
 
                         var pessoa = new PessoaCrud(listaDados[0], int.Parse(listaDados[1]), listaDados[2], listaDados[3],
-                        listaDados[4);
+                        listaDados[4]);
 
                         try
                         {
@@ -93,16 +93,10 @@ namespace CRUD_MongoDB
                         Console.WriteLine("Escreva seu Nome:");
                         dados.Add(Console.ReadLine());
 
-                        Console.WriteLine("Escreva sue Sexo:");
-                        dados.Add(Console.ReadLine());
-
                         Console.WriteLine("Escreva sua Idade:");
                         dados.Add(Console.ReadLine());
 
                         Console.WriteLine("Escreva sua Cor:");
-                        dados.Add(Console.ReadLine());
-
-                        Console.WriteLine("Escreva sua Profissão:");
                         dados.Add(Console.ReadLine());
 
                         Console.WriteLine("Escreva seu Estado:");
@@ -111,14 +105,7 @@ namespace CRUD_MongoDB
                         Console.WriteLine("Escreva sua Cidade:");
                         dados.Add(Console.ReadLine());
 
-                        Console.WriteLine("Escreva sua Bairro:");
-                        dados.Add(Console.ReadLine());
-
-                        Console.WriteLine("Escreva seu Email:");
-                        dados.Add(Console.ReadLine());
-
-                        var pessoa = new PessoaCrud(dados[0], dados[1], int.Parse(dados[2]), dados[3], dados[4], dados[5], dados[6],
-                        dados[7], dados[8]);
+                        var pessoa = new PessoaCrud(dados[0], int.Parse(dados[1]), dados[2], dados[3], dados[4]);
 
                         Console.WriteLine();
 
@@ -159,7 +146,7 @@ namespace CRUD_MongoDB
                         {
                             Console.WriteLine();
                             Console.WriteLine("Deseja pesquisar por qual Categoria:");
-                            Console.WriteLine("(Id, Nome, Sexo, Idade, Cor, Profissão, Estado, Cidade, Bairro ou Email)");
+                            Console.WriteLine("(Id, Nome, Idade, Cor, Estado, Cidade)");
                             categoria = Console.ReadLine().ToLower().FirstChar();
 
                             verificador = pessoaCrud.Verificar(categoria, 1);
@@ -234,7 +221,7 @@ namespace CRUD_MongoDB
                         {
                             Console.WriteLine();
                             Console.WriteLine("Que categoria de dado deseja pesquisar?");
-                            Console.WriteLine("(Id, Nome, Sexo, Idade, Cor, Profissão, Estado, Cidade, Bairro ou Email)");
+                            Console.WriteLine("(Id, Nome, Idade, Cor, Estado, Cidade)");
                             categoria = Console.ReadLine().ToLower().FirstChar();
 
                             verificador = pessoaCrud.Verificar(categoria, 1);
@@ -307,7 +294,7 @@ namespace CRUD_MongoDB
                     {
                         Console.WriteLine();
                         Console.WriteLine("Deseja alterar que categoria?");
-                        Console.WriteLine("(Nome, Sexo, Idade, Cor, Profissão, Estado, Cidade, Bairro ou Email)");
+                        Console.WriteLine("(Nome, Idade, Cor, Estado, Cidade)");
                         string update_categoria = Console.ReadLine().ToLower().FirstChar();
 
                         Console.WriteLine();
@@ -369,7 +356,7 @@ namespace CRUD_MongoDB
                         {
                             Console.WriteLine();
                             Console.WriteLine("Que categoria de dado deseja pesquisar?");
-                            Console.WriteLine("(Id, Nome, Sexo, Idade, Cor, Profissão, Estado, Cidade, Bairro ou Email)");
+                            Console.WriteLine("(Id, Nome, Idade, Cor, Estado, Cidade)");
                             categoria = Console.ReadLine().ToLower().FirstChar();
 
                             verificador = pessoaCrud.Verificar(categoria, 1);

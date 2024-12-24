@@ -52,7 +52,7 @@ namespace CRUD_MongoDB
                     {
                         Console.WriteLine();
                         Console.WriteLine("Insira as categorias pela ordem e separando-as por virgula (,).");
-                        Console.WriteLine("(Nome, Sexo, Idade, Cor, Profissão, Estado, Cidade, Bairro ou Email)");
+                        Console.WriteLine("(Nome, Idade, Cor, Estado, Cidade)");
                         Console.WriteLine();
                         Console.WriteLine("Caso não tenho o dado ou não saiba, coloque uma virgula antes de um espaço e coloque uma virgula depois");
                         Console.WriteLine("Exemplo: Nome, , Sexo");
@@ -61,8 +61,8 @@ namespace CRUD_MongoDB
 
                         var listaDados = pessoaCrud.toList(dadosInline);
 
-                        var pessoa = new PessoaCrud(listaDados[0], listaDados[1], int.Parse(listaDados[2]), listaDados[3],
-                        listaDados[4], listaDados[5], listaDados[6], listaDados[7], listaDados[8]);
+                        var pessoa = new PessoaCrud(listaDados[0], int.Parse(listaDados[1]), listaDados[2], listaDados[3],
+                        listaDados[4);
 
                         try
                         {

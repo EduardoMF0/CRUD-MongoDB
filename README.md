@@ -7,10 +7,10 @@ O principal objetivo deste projeto foi explorar e aprofundar meus conhecimentos 
 
 ### :file_folder: Projeto:
 Desenvolvi uma aplicação em console para manipulação CRUD (Criar, Ler, Atualizar e Excluir), que inclui os seguintes comandos:
-• Criar: Inserir documentos no banco de dados a partir de entradas do usuário;
-• Ler/Pesquisar: Consultar documentos armazenados no banco de dados;
-• Atualizar: Modificar os dados de documentos existentes;
-• Excluir: Remover documentos do banco de dados.
+	• Criar: Inserir documentos no banco de dados a partir de entradas do usuário;
+	• Ler/Pesquisar: Consultar documentos armazenados no banco de dados;
+	• Atualizar: Modificar os dados de documentos existentes;
+	• Excluir: Remover documentos do banco de dados.
 
 ### ⚙️ Tecnologias:
 C# e MongoDB.
